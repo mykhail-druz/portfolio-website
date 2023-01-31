@@ -57,6 +57,16 @@ const Navbar = props => {
                         <Logo />
                     </Heading>
                 </Flex>
+
+                <Stack
+                direction={{base: 'column', md: 'row'}}
+                display={{base: 'none', md: 'flex'}}
+                alignItems="center"
+                flexGrow={1}
+                mt={{ base:4, nmd:0 }}
+                >
+
+                </Stack>
             </Container>
         </Box>
     )
