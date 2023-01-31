@@ -3,9 +3,9 @@ const PrintIcon = props => {
     <svg
       width={25}
       height={25}
-      className="w-5 inline-block transition-transform group-hover:rotate-[20deg]"
+      className="w-5 inline-block transition-transform group-hover:rotate-[20deg] color:white"
       viewBox="0 0 500 500"
-      fill="#000000"
+      fill="currentColor"
       {...props}
     >
     <g>
