@@ -14,8 +14,9 @@ import {
     useColorModeValue,
     MenuButton
 } from '@chakra-ui/react';
-import { HamburgerIcon, HumburgerIcon } from '@chakra-ui/icons';
+import { HamburgerIcon } from '@chakra-ui/icons';
 import ThemeToggleButton from './layouts/theme-toggle-button';
+import { IoLogoGithub } from 'react-icons/io5'
 
 const LinkItem = ({ href, path, children }) => {
     const active = path === href
