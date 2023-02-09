@@ -11,6 +11,7 @@ import {
     useColorModeValue,
     chakra
 } from "@chakra-ui/react";
+import Section from '../components/section';
 import Image from 'next/image'
 
 const ProfileImage = chakra(Image, {
@@ -48,7 +49,7 @@ const HomePage = () => {
                     overflow="hidden"
                     >
                         <ProfileImage
-                        src="/image/mykhail.jpg"
+                        src="/images/misha.png"
                         alt="Profile image"
                         borderRadius="full"
                         width="100"
@@ -57,6 +58,9 @@ const HomePage = () => {
                     </Box>
                 </Box>
             </Box>
+            <Section delay={0.1}>
+
+            </Section>
         </Container>
     )
 }
