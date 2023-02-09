@@ -1,3 +1,4 @@
+import { forwardRef } from 'react';
 import Logo from './logo';
 import NextLink from 'next/link';
 import {
@@ -15,23 +16,30 @@ import {
     MenuButton
 } from '@chakra-ui/react';
 import { HamburgerIcon } from '@chakra-ui/icons';
-import ThemeToggleButton from './layouts/theme-toggle-button';
-import { IoLogoGithub } from 'react-icons/io5'
+import ThemeToggleButton from './theme-toggle-button';
 
-const LinkItem = ({ href, path, children }) => {
+const LinkItem = ({ href, path, children, target, ...props }) => {
     const active = path === href
     const inactiveColor = useColorModeValue('gray200', 'whiteAlpha.900')
     return (
-        <NextLink href={href}>
-            <Link
+        <Link
+            as={NextLink}
+            href={href}
+            scroll={false}
             p={2}
             bg={active ? 'glassTeal' : undefined}
-            color={active ? '#202023' : inactiveColor}>
-                {children}
-            </Link>
-        </NextLink>
+            color={active ? '#202023' : inactiveColor}
+            target={target}
+            {...props}
+        >
+            {children}
+        </Link>
     )
 }
+
+const MenuLink = forwardRef((props, ref) => (
+    <Link ref={ref} as={NextLink} {...props} />
+))
 
 const Navbar = props => {
     const { path } = props
@@ -43,7 +51,7 @@ const Navbar = props => {
         w="100%"
         bg={useColorModeValue('#ffffff40', '#20202380')}
         style={{backdropFilter: 'blur(10px'}}
-        zIndex={1}
+        zIndex={2}
         {...props}
         >
             <Container
@@ -65,7 +73,7 @@ const Navbar = props => {
                 display={{base: 'none', md: 'flex'}}
                 alignItems="center"
                 flexGrow={1}
-                mt={{ base:4, nmd:0 }}
+                mt={{ base:4, md:0 }}
                 >
                     <LinkItem href="/works" path={path}>
                         Works
@@ -73,7 +81,7 @@ const Navbar = props => {
                     <LinkItem href="/posts" path={path}>
                         Posts
                     </LinkItem>
-                    <LinkItem href="https://t.me/mykhail_druz" path={path}>
+                    <LinkItem href="https://t.me/mykhail_druz">
                         Contact me
                     </LinkItem>
                 </Stack>
@@ -88,18 +96,10 @@ const Navbar = props => {
                             aria-label="Options"
                             />
                             <MenuList>
-                                <NextLink href="/" passHref>
-                                    <MenuItem as={Link}>About</MenuItem>
-                                </NextLink>
-                                <NextLink href="/works" passHref>
-                                    <MenuItem as={Link}>Works</MenuItem>
-                                </NextLink>
-                                <NextLink href="/posts" passHref>
-                                    <MenuItem as={Link}>Posts</MenuItem>
-                                </NextLink>
-                                    <MenuItem as={Link} href="https://t.me/mykhail_druz">
-                                        Contact me
-                                    </MenuItem>
+                                    <MenuItem as={MenuLink} href="/">About</MenuItem>
+                                    <MenuItem as={MenuLink} href="/works">Works</MenuItem>
+                                    <MenuItem as={MenuLink} href="/posts">Posts</MenuItem>
+                                    <MenuItem as={MenuLink} href="https://t.me/mykhail_druz">Contact me</MenuItem>
                             </MenuList>
                         </Menu>
                     </Box>
