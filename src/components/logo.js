@@ -1,5 +1,5 @@
 import Link from "next/link";
-import PrintIcon from "./icons/print.js";
+import PrintIcon from "../icons/print.js";
 import Image from "next/image";
 import { Text, useColorModeValue } from "@chakra-ui/react";
 import styled from "@emotion/styled";

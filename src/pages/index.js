@@ -12,6 +12,7 @@ import {
     chakra
 } from "@chakra-ui/react";
 import Section from '../components/section';
+import Paragraph from '../components/paragraph';
 import Image from 'next/image'
 
 const ProfileImage = chakra(Image, {
@@ -59,7 +60,10 @@ const HomePage = () => {
                 </Box>
             </Box>
             <Section delay={0.1}>
-
+                <Heading h={3} variant="section-title">
+                    Work
+                </Heading>
+                <Paragraph></Paragraph>
             </Section>
         </Container>
     )
