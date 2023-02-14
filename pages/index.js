@@ -9,7 +9,8 @@ import {
   List,
   ListItem,
   useColorModeValue,
-  chakra
+  chakra,
+  Icon
 } from '@chakra-ui/react'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import Layout from '../components/layouts/article'
@@ -17,6 +18,12 @@ import Section from '../components/section'
 import Paragraph from '../components/paragraph'
 import { BioSection, BioYear } from '../components/bio'
 import Image from 'next/image'
+import { GridItem } from '../components/grid-item'
+import {
+  IoLogoInstagram,
+  IoLogoGithub
+} from 'react-icons/io5';
+import { FaTelegramPlane } from 'react-icons/fa'
 
 const ProfileImage = chakra(Image, {
   shouldForwardProp: prop => ['width', 'height', 'src', 'alt'].includes(prop)
@@ -41,7 +48,7 @@ const HomePage = () => {
           <Heading as="h2" variant="page-title">
             Mykhail Druz
           </Heading>
-          <p>FE Developer (Markup developing / Landings / eCommerce sites)</p>
+          <p>Front-end Developer (Markup developing / Landings / eCommerce sites)</p>
         </Box>
         <Box
           flexShrink={0}
@@ -70,15 +77,16 @@ const HomePage = () => {
         </Box>
       </Box>
       <Section delay={0.1}>
-        <Heading h={3} variant="section-title">
+        <Heading as="h3" variant="section-title">
           Work
         </Heading>
         <Paragraph>
-          Mykhail is an aspiring frontend developer with a strong command of
-          HTML, CSS, JavaScript, React, Next.js, Bootstrap and Tailwind
-          technologies. With 4.5 months of training at ProgAcademy and a
+          Mykhail is an aspiring frontend developer based in Kyiv with a strong command of
+          HTML, CSS, React, Next.js, and Tailwind
+          technologies. He create and improve websites, landings and online stores. Makes adaptive layout.
+          With 4.5 months of training at ProgAcademy and a
           relentless passion for learning, Mykhail continues to improve his
-          skills and knowledge. In addition to programming, I`m is pursuing a
+          skills and knowledge. In addition to programming, he`s is pursuing a
           degree in international management at university.
         </Paragraph>
         <Box align="center" my={4}>
@@ -89,8 +97,30 @@ const HomePage = () => {
           </NextLink>
         </Box>
       </Section>
-
       <Section delay={0.2}>
+        <Heading as="h3" variant="section-title">
+          Key skills
+        </Heading>
+              <Paragraph>-Developing of adaptive sites with HTML, CSS, Bootstrap, TailWind, React, Next.js.</Paragraph>
+              <Paragraph>-Understanding the principles of Mobile first.</Paragraph>
+              <Paragraph>-JavaScript, OOP principles, using preprocessors.</Paragraph>
+              <Paragraph>-Practical usage of React, NextJs.</Paragraph>
+          </Section>
+          <Section>
+            <Heading as="h3" variant="section-title">Education</Heading>
+            <Paragraph>
+              -Course "Front-End developer" at Prog Academy (4.5 months)
+            </Paragraph>
+          </Section>
+          <Section>
+            <Heading as="h3" variant="section-title">Knowledge of technologies</Heading>
+            <Paragraph>-HTML5/CSS3</Paragraph>
+            <Paragraph>-Bootstrap 5, TailWind</Paragraph>
+            <Paragraph>-JavaScript ES5/ES6, OOP</Paragraph>
+            <Paragraph>-React, Next.js</Paragraph>
+            <Paragraph>-Git, GitHub</Paragraph>
+          </Section>
+      <Section delay={0.3}>
         <Heading as="h3" variant="section-title">
           Bio
         </Heading>
@@ -109,10 +139,33 @@ const HomePage = () => {
           self-improvement.
         </BioSection>
       </Section>
-      <Section delay={0.3}>
+      <Section delay={0.4}>
         <Heading as="h3" variant="section-title">
           On the web
         </Heading>
+        <List>
+          <ListItem>
+            <Link href='https://github.com/mykhail-druz' target="_blank">
+              <Button variant="ghost" colorScheme="teal" leftIcon={<Icon as={IoLogoGithub} />}>
+                @mykhail-druz
+              </Button>
+            </Link>
+          </ListItem>
+          <ListItem>
+            <Link href='https://www.instagram.com/mykhail.druz/' target="_blank">
+              <Button variant="ghost" colorScheme="teal" leftIcon={<Icon as={IoLogoInstagram} />}>
+                @mykhail.druz
+              </Button>
+            </Link>
+          </ListItem>
+          <ListItem>
+            <Link href='https://t.me/mykhail_druz' target="_blank">
+              <Button variant="ghost" colorScheme="teal" leftIcon={<Icon as={FaTelegramPlane} />}>
+                Mykhail Druz
+              </Button>
+            </Link>
+          </ListItem>
+        </List>
       </Section>
     </Container>
     </Layout>
