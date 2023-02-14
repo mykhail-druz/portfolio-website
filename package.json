@@ -1,0 +1,40 @@
+{
+  "name": "portfolio-website",
+  "version": "1.0.0",
+  "description": "A unique website which I can use as portfolio for my works",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev -H 0.0.0.0",
+    "build": "next build",
+    "prettier": "prettier -write .",
+    "lint": "next lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mykhail-druz/portfolio-website.git"
+  },
+  "keywords": [],
+  "author": "Mykhail Druz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mykhail-druz/portfolio-website/issues"
+  },
+  "homepage": "https://github.com/mykhail-druz/portfolio-website#readme",
+  "dependencies": {
+    "@chakra-ui/icons": "^2.0.17",
+    "@chakra-ui/react": "^2.4.9",
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "framer-motion": "^8.5.5",
+    "next": "^13.1.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.7.1",
+    "three": "^0.149.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.33.0",
+    "eslint-config-next": "^13.1.6",
+    "prettier": "^2.8.3"
+  }
+}
