@@ -7,6 +7,7 @@ import dynamic from "next/dynamic";
 
 const Website = ({ Component, pageProps, router }) => {
     return (
+        <>
         <ChakraProvider theme={theme}>
             <Fonts />
             <Layout router={router}>
@@ -15,7 +16,8 @@ const Website = ({ Component, pageProps, router }) => {
                 </AnimatePresence>
             </Layout>
         </ChakraProvider>
+        </>
     )
 }
 
-export default dynamic (() => Promise.resolve(Website), {ssr: false})
+export default dynamic (() => Promise.resolve(Website), {ssr: false});

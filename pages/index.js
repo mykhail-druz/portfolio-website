@@ -24,12 +24,31 @@ import {
   IoLogoGithub
 } from 'react-icons/io5';
 import { FaTelegramPlane } from 'react-icons/fa'
+import { useRouter } from 'next/router'
+import { en, uk } from '../components/translations'
 
 const ProfileImage = chakra(Image, {
   shouldForwardProp: prop => ['width', 'height', 'src', 'alt'].includes(prop)
 })
 
 const HomePage = () => {
+
+  const router = useRouter();
+  const { locale } = router;
+
+  const t = locale === "uk" ? uk : en;
+
+  const handleLanguageToggle = () => {
+      switch (locale) {
+          case "uk":
+              router.push("/", "/", { locale: "en" })
+              break;
+          case "en":
+              router.push("/", "/", { locale: "uk" })
+              break;
+      }
+  }
+
   return (
     <Layout>
     <Container>
