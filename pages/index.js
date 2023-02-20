@@ -21,7 +21,8 @@ import Image from 'next/image'
 import { GridItem } from '../components/grid-item'
 import {
   IoLogoInstagram,
-  IoLogoGithub
+  IoLogoGithub,
+  IoLogoLinkedin
 } from 'react-icons/io5';
 import { FaTelegramPlane } from 'react-icons/fa'
 import { useRouter } from 'next/router'
@@ -38,16 +39,16 @@ const HomePage = () => {
 
   const t = locale === "uk" ? uk : en;
 
-  const handleLanguageToggle = () => {
-      switch (locale) {
-          case "uk":
-              router.push("/", "/", { locale: "en" })
-              break;
-          case "en":
-              router.push("/", "/", { locale: "uk" })
-              break;
-      }
-  }
+  // const handleLanguageToggle = () => {
+  //     switch (locale) {
+  //         case "uk":
+  //             router.push("/", "/", { locale: "en" })
+  //             break;
+  //         case "en":
+  //             router.push("/", "/", { locale: "uk" })
+  //             break;
+  //     }
+  // }
 
   return (
     <Layout>
@@ -59,15 +60,15 @@ const HomePage = () => {
         mb={6}
         align="center"
       >
-        Hello, I&apos;m a Front-end developer from Ukraine!
+        {t.hello}
       </Box>
 
       <Box display={{ md: 'flex' }}>
         <Box flexGrow={1}>
           <Heading as="h2" variant="page-title">
-            Mykhail Druz
+            {t.misha}
           </Heading>
-          <p>Front-end Developer (Markup developing / Landings / eCommerce sites)</p>
+          <p>{t.desc}</p>
         </Box>
         <Box
           flexShrink={0}
@@ -97,38 +98,35 @@ const HomePage = () => {
       </Box>
       <Section delay={0.1}>
         <Heading as="h3" variant="section-title">
-          Work
+          {t.about}
         </Heading>
         <Paragraph>
-          Mykhail is an aspiring frontend developer based in Kyiv with a strong command of
-          HTML, CSS, React, Next.js, and Tailwind
-          technologies. He create and improve websites, landings and online stores. Makes adaptive layout.
-          With 4.5 months of training at ProgAcademy and a
-          relentless passion for learning, Mykhail continues to improve his
-          skills and knowledge. In addition to programming, he`s is pursuing a
-          degree in international management at university.
+          {t.about_desc}
         </Paragraph>
         <Box align="center" my={4}>
           <NextLink href="/works">
             <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
-              My portfolio
+              {t.works}
             </Button>
           </NextLink>
         </Box>
       </Section>
       <Section delay={0.2}>
         <Heading as="h3" variant="section-title">
-          Key skills
+          {t.skills}
         </Heading>
-              <Paragraph>-Developing of adaptive sites with HTML, CSS, Bootstrap, TailWind, React, Next.js.</Paragraph>
-              <Paragraph>-Understanding the principles of Mobile first.</Paragraph>
-              <Paragraph>-JavaScript, OOP principles, using preprocessors.</Paragraph>
-              <Paragraph>-Practical usage of React, NextJs.</Paragraph>
+              <Paragraph>{t.skills_1}</Paragraph>
+              <Paragraph>{t.skills_2}</Paragraph>
+              <Paragraph>{t.skills_3}</Paragraph>
+              <Paragraph>{t.skills_4}</Paragraph>
           </Section>
           <Section>
-            <Heading as="h3" variant="section-title">Education</Heading>
+            <Heading as="h3" variant="section-title">{t.edu}</Heading>
             <Paragraph>
-              -Course "Front-End developer" at Prog Academy (4.5 months)
+              {t.edu_1}
+            </Paragraph>
+            <Paragraph>
+              {t.edu_2}
             </Paragraph>
           </Section>
           <Section>
@@ -181,6 +179,13 @@ const HomePage = () => {
             <Link href='https://t.me/mykhail_druz' target="_blank">
               <Button variant="ghost" colorScheme="teal" leftIcon={<Icon as={FaTelegramPlane} />}>
                 Mykhail Druz
+              </Button>
+            </Link>
+          </ListItem>
+          <ListItem>
+            <Link href='https://www.linkedin.com/in/mykhail-druz-0903a9262/' target="_blank">
+              <Button variant="ghost" colorScheme="teal" leftIcon={<Icon as={IoLogoLinkedin} />}>
+                My LinkedIn
               </Button>
             </Link>
           </ListItem>

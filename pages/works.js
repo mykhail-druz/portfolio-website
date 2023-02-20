@@ -17,12 +17,12 @@ const Works = () => {
 
       <SimpleGrid columns={[1, 1, 2]} gap={6}>
         <Section>
-          <WorkGridItem id="portfolio" title="Portfolio" thumbnail={thumbPortfolio}>
+          <WorkGridItem id="portfolio" title="Designer`s portfolio" thumbnail={thumbPortfolio}>
             A simple portfolio website based on HTML/CSS ( my first project)
           </WorkGridItem>
         </Section>
         <Section>
-          <WorkGridItem id="e-ushki" title="eUshki" thumbnail={thumbUshki}>
+          <WorkGridItem id="e-ushki" title="E-ushki" thumbnail={thumbUshki}>
             An e-commerce site for headphones based on Next.js (PET-project)
           </WorkGridItem>
         </Section>

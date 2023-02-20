@@ -121,16 +121,16 @@ const Navbar = props => {
               />
               <MenuList>
                 <MenuItem as={MenuLink} href="/">
-                  About
+                  {t.main}
                 </MenuItem>
                 <MenuItem as={MenuLink} href="/works">
-                  Works
+                  {t.works}
                 </MenuItem>
                 <MenuItem as={MenuLink} href="/posts">
-                  Posts
+                  {t.posts}
                 </MenuItem>
                 <MenuItem as={MenuLink} href="https://t.me/mykhail_druz">
-                  Contact me
+                  {t.contact}
                 </MenuItem>
               </MenuList>
             </Menu>

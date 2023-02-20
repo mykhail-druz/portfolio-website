@@ -1,13 +1,42 @@
 export const en = {
-    works: "Works",
+    lang: "UA",
+    works: "My portfolio",
     posts: "Posts",
     contact: "Contact me",
-    lang: "UA"
+    main: "Main",
+    hello: "Hello, I`m a Front-end developer from Kyiv, Ukraine",
+    misha: "Mykhail Druz",
+    desc: "Front-end developer (Markup developing / Landings / eCommerce sites)",
+    about: "About me",
+    about_desc: "I am a junior frontend developer based in Kyiv with a strong command of HTML, CSS, React, Next.js, and Tailwind technologies. I also have experience with Bootstrap5 and Chakra UI. Besides, I'm open to learning Typescript if it's useful for future projects. I create and improve adaptive websites, landings and online stores. Have 6 months experience in front-end development and arelentless passion for learning, I continue to improve my skills and knowledge. In addition to programming, I am pursuing a degree in international management at university. I also have good english(B1+) and communicative skills.",
+    skills: "Key skills",
+    skills_1: "-Developing of adaptive sites with HTML, CSS, Bootstrap, TailWind, React, Next.js.",
+    skills_2: "-Understanding the principles of 'Mobile first'.",
+    skills_3: "-JavaScript, OOP principles, using preprocessors.",
+    skills_4: "-Practical usage of React, NextJs.",
+    edu: "Education",
+    edu_1: "-Course 'Front-end developer' at Prog Academy (4.5 months)",
+    edu_2: "I am constantly improving my skills in the front-end development through documentation review, online courses and participation in projects. I try to keep up with the latest trends and technologies to create quality web applications.",
+
 }
 
 export const uk = {
-    works: "Мої роботи",
+    lang: "EN",
+    works: "Портфоліо",
     posts: "Пости",
     contact: "Зв'язатися",
-    lang: "EN",
+    main: "Головна",
+    hello: "Привіт, я - Front-end розробник з Києва!",
+    misha: "Михайло Друзь",
+    desc: "Front-end розробник (Верстка сайтів / Лендінги / Інтернет-магазини)",
+    about: "Про мене",
+    about_desc: "Я - Junior Frontend розробник з Києва, добре володію технологіями HTML, CSS, React, Next.js і Tailwind. У мене також є досвід роботи з Bootstrap5 і Chakra UI. До того ж я відкритий до вивчення Typescript якщо це буде портібно для майбутніх проєктів. Створюю та вдосконалюю адаптивні сайти, лендінги та інтернет-магазини. Маю 6 місяців досвіду фронтенд розробки та невпинну пристрасть до навчання, я продовжую вдосконалювати свої навички та знання. Окрім програмування, я здобуваю навчаюся міжнародному менеджменту в університеті. Я також добре володію англійською (B1+) та маю гарні комунікативні навички.",
+    skills: "Ключові навички",
+    skills_1: "-Розробка адаптивних сайтів на HTML, CSS, Bootstrap, TailWind, React, Next.js.",
+    skills_2: "-Розуміння принципів 'Mobile first'.",
+    skills_3: "-JavaScript, принципи ООП, використання препроцесорів.",
+    skills_4: "-Приктичне використання React, NextJs.",
+    edu: "Освіта",
+    edu_1: "-Курс 'Front-end developer' у Prog Academy (4.5 місяці)",
+    edu_2: "-Я постійно вдосконалюю свої навички в галузі фронтенд розробки через перегляд документації, онлайн-курси та участь у проектах. Я намагаюся бути в курсі останніх тенденцій та технологій, щоб створювати якісні веб-додатки."
 }
