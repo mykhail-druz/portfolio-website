@@ -39,17 +39,6 @@ const HomePage = () => {
 
   const t = locale === "uk" ? uk : en;
 
-  // const handleLanguageToggle = () => {
-  //     switch (locale) {
-  //         case "uk":
-  //             router.push("/", "/", { locale: "en" })
-  //             break;
-  //         case "en":
-  //             router.push("/", "/", { locale: "uk" })
-  //             break;
-  //     }
-  // }
-
   return (
     <Layout>
     <Container>

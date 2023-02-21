@@ -105,11 +105,10 @@ const Navbar = props => {
           <LinkItem href="https://t.me/mykhail_druz">{t.contact}</LinkItem>
         </Stack>
         <Box flex={1} align="right">
-            <Button mr={2} backgroundColor="transparent"
-            onClick={handleLanguageToggle}>
-                {/* <LanguageButton /> */}
-                {t.lang}
-                </Button>
+          <Button mr={2} backgroundColor="transparent"
+          onClick={handleLanguageToggle}>
+              {t.lang}
+          </Button>
           <ThemeToggleButton />
           <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
             <Menu>
