@@ -6,8 +6,18 @@ import thumbUshki from '../public/images/works/e-ushki.png'
 import thumbPortfolio from '../public/images/works/portfolio.png';
 import Layout from '../components/layouts/article';
 
+import { useRouter } from 'next/router'
+import { en, uk } from '../components/translations'
+
 const Works = () => {
+
+  const router = useRouter();
+  const { locale } = router;
+
+  const t = locale === "uk" ? uk : en;
+
   return (
+    <>
     <Layout>
     <Container>
       <Heading as="h3" fontSize={20} mb={4}>
@@ -16,18 +26,19 @@ const Works = () => {
 
       <SimpleGrid columns={[1, 1, 2]} gap={6}>
         <Section>
-          <WorkGridItem id="portfolio" title="Portfolio" thumbnail={thumbPortfolio}>
-            A simple portfolio website based on HTML/CSS ( my first project)
+          <WorkGridItem id="portfolio" title="Designer`s portfolio" thumbnail={thumbPortfolio}>
+            {t.designer}
           </WorkGridItem>
         </Section>
         <Section>
-          <WorkGridItem id="e-ushki" title="eUshki" thumbnail={thumbUshki}>
-            An e-commerce site for headphones based on Next.js (PET-project)
+          <WorkGridItem id="e-ushki" title="E-ushki" thumbnail={thumbUshki}>
+            {t.ushki}
           </WorkGridItem>
         </Section>
       </SimpleGrid>
     </Container>
     </Layout>
+    </>
   )
 }
 
