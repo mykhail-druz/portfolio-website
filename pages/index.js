@@ -125,40 +125,39 @@ const HomePage = () => {
             <Paragraph>
               {t.edu_1}
             </Paragraph>
-            <Paragraph>
+            <Paragraph >
               {t.edu_2}
             </Paragraph>
+            <Image src="/images/diplom.png" width={500} height={400}/>
           </Section>
           <Section>
-            <Heading as="h3" variant="section-title">Knowledge of technologies</Heading>
+            <Heading as="h3" variant="section-title">{t.tech}</Heading>
             <Paragraph>-HTML5/CSS3</Paragraph>
-            <Paragraph>-Bootstrap 5, TailWind</Paragraph>
+            <Paragraph>-Bootstrap 5, TailWind, Chakra UI</Paragraph>
             <Paragraph>-JavaScript ES5/ES6, OOP</Paragraph>
             <Paragraph>-React, Next.js</Paragraph>
             <Paragraph>-Git, GitHub</Paragraph>
           </Section>
       <Section delay={0.3}>
         <Heading as="h3" variant="section-title">
-          Bio
+          {t.bio}
         </Heading>
         <BioSection>
           <BioYear>2004</BioYear>
-          Was born in Donetsk, Ukraine.
+          {t.bio_1}
         </BioSection>
         <BioSection>
           <BioYear>2021</BioYear>
-          Graduated from school in Kyiv and entered the Kiev National University
-          of Trade and Economics for International Management
+          {t.bio_2}
         </BioSection>
         <BioSection>
           <BioYear>2022 to present</BioYear>
-          Started a career in Web-developing. Lots of effort for learning and
-          self-improvement.
+          {t.bio_3}
         </BioSection>
       </Section>
       <Section delay={0.4}>
         <Heading as="h3" variant="section-title">
-          On the web
+          {t.web}
         </Heading>
         <List>
           <ListItem>

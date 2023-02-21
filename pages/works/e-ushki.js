@@ -4,7 +4,16 @@ import { Title, WorkImage, Meta } from "../../components/work";
 import Paragraph from "../../components/paragraph";
 import Layout from "../../components/layouts/article";
 
+import { useRouter } from 'next/router'
+import { en, uk } from '../../components/translations'
+
 const Work = () => {
+
+    const router = useRouter();
+    const { locale } = router;
+  
+    const t = locale === "uk" ? uk : en;
+
     return (
         <Layout title="eUshki">
             <Container>
@@ -12,7 +21,7 @@ const Work = () => {
                     eUshki <Badge>eCommerce</Badge>
                 </Title>
                 <Paragraph>
-                    An e-commerce site for headphones based on: sanity studio, stripe, vercel app(PET-project)
+                    {t.ushki_page}
                 </Paragraph>
                 <List ml={4} my={4}>
                     <ListItem>

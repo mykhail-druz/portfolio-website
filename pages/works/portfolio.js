@@ -4,7 +4,16 @@ import { Title, WorkImage, Meta } from "../../components/work";
 import Paragraph from "../../components/paragraph";
 import Layout from "../../components/layouts/article";
 
+import { useRouter } from 'next/router'
+import { en, uk } from '../../components/translations'
+
 const Work = () => {
+
+    const router = useRouter();
+    const { locale } = router;
+  
+    const t = locale === "uk" ? uk : en;
+
     return (
         <Layout title ="Portfolio">
             <Container>
@@ -12,7 +21,7 @@ const Work = () => {
                     Portfolio <Badge>HTML/CSS LANDING</Badge>
                 </Title>
                 <Paragraph>
-                    A simple portfolio website based on HTML/CSS (my first project)
+                    {t.designer_page}
                 </Paragraph>
                 <List ml={4} my={4}>
                     <ListItem>
