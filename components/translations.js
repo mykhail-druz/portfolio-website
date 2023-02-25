@@ -23,8 +23,8 @@ export const en = {
     bio_2: "Graduated from school in Kyiv and entered the Kiev National University of Trade and Economics for International Management.",
     bio_3: "Started a career in Web-developing. Lots of effort for learning and self-improvement.",
     web: "On the web",
-    designer: "Markup for a portfolio website based on HTML/CSS (my first project)",
-    designer_page: "Markup for a portfolio website based on HTML/CSS (my first project)",
+    designer: "Markup for a portfolio website based on HTML/CSS",
+    designer_page: "Markup for a portfolio website based on HTML/CSS",
     ushki: "An e-commerce site for headphones based on Next.js (PET-project)",
     ushki_page: "An e-commerce site for headphones based on: sanity studio, stripe CMS and vercel app (PET-project)",
 }
@@ -54,8 +54,8 @@ export const uk = {
     bio_2: "Закінчив школу в Києві та вступив до Київського національного торговельно-економічного університету на міжнародний менеджмент.",
     bio_3: "Розпочав кар'єру в Web-розробці. Прикладаю багато зусиль для навчання та самовдосконалення.",
     web: "В мережі",
-    designer: "Верстка сайту-портфоліо для дизайнера на HTML/CSS (мій перший проєкт)",
-    designer_page: "Верстка сайту-портфоліо для дизайнера на HTML/CSS (мій перший проєкт)",
+    designer: "Верстка сайту-портфоліо для дизайнера на HTML/CSS",
+    designer_page: "Верстка сайту-портфоліо для дизайнера на HTML/CSS",
     ushki: "Інтернет-магазин навушників, написаний на Next.js (PET-project)",
     ushki_page: "Інтернет-магазин навушників, написаний на Next.js з використанням технологій Stripe, Vercel та Sanity CMS (PET-project)",
 }
