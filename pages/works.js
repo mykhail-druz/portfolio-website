@@ -4,6 +4,7 @@ import { WorkGridItem } from '../components/grid-item'
 
 import thumbUshki from '../public/images/works/e-ushki.png'
 import thumbPortfolio from '../public/images/works/portfolio.png';
+import thumbCurrency from '../public/images/works/currency.png';
 import Layout from '../components/layouts/article';
 
 import { useRouter } from 'next/router'
@@ -33,6 +34,11 @@ const Works = () => {
         <Section>
           <WorkGridItem id="e-ushki" title="E-ushki" thumbnail={thumbUshki}>
             {t.ushki}
+          </WorkGridItem>
+        </Section>
+        <Section>
+          <WorkGridItem id="currency-converter" title="Currency converter" thumbnail={thumbCurrency}>
+            {t.currency}
           </WorkGridItem>
         </Section>
       </SimpleGrid>
