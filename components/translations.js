@@ -25,8 +25,10 @@ export const en = {
     web: "On the web",
     designer: "Markup for a portfolio website based on HTML/CSS",
     designer_page: "Markup for a portfolio website based on HTML/CSS",
-    ushki: "An e-commerce site for headphones based on Next.js (PET-project)",
+    ushki: "An e-commerce site for headphones based on Next.js",
     ushki_page: "An e-commerce site for headphones based on: sanity studio, stripe CMS and vercel app (PET-project)",
+    currency: "Website for currency conversion of UAH, USD, EUR",
+    currency_page: "Website for currency conversion of UAH, USD, EUR. Based on React.js, Aos animations and tailwind css. Using fixer.io API"
 }
 
 export const uk = {
@@ -56,6 +58,8 @@ export const uk = {
     web: "В мережі",
     designer: "Верстка сайту-портфоліо для дизайнера на HTML/CSS",
     designer_page: "Верстка сайту-портфоліо для дизайнера на HTML/CSS",
-    ushki: "Інтернет-магазин навушників, написаний на Next.js (PET-project)",
+    ushki: "Інтернет-магазин навушників, написаний на Next.js",
     ushki_page: "Інтернет-магазин навушників, написаний на Next.js з використанням технологій Stripe, Vercel та Sanity CMS (PET-project)",
+    currency: "Сайт для конвертації валют UAH, USD, EUR.",
+    currency_page: "Сайт для конвертації валют UAH, USD, EUR. На основі React.js, анімацій Aos і css tailwind. Використовувалось API fixer.io"
 }
