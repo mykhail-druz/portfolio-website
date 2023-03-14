@@ -2,8 +2,7 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/": "pages/index.js",
-  "/posts": "pages/posts.js",
-  "/works/portfolio": "pages/works/portfolio.js",
-  "/works": "pages/works.js"
+  "/works": "pages/works.js",
+  "/works/currency-converter": "pages/works/currency-converter.js",
+  "/": "pages/index.js"
 }
