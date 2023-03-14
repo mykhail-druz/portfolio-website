@@ -15,11 +15,6 @@
   ],
   "rootMainFiles": [],
   "pages": {
-    "/": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/index.js"
-    ],
     "/_app": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
@@ -35,10 +30,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/works.js"
     ],
-    "/works/currency-converter": [
+    "/works/xpense": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/works/currency-converter.js"
+      "static/chunks/pages/works/xpense.js"
     ]
   },
   "ampFirstPages": []
