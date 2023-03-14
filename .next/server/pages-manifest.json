@@ -3,6 +3,5 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/works": "pages/works.js",
-  "/works/currency-converter": "pages/works/currency-converter.js",
-  "/": "pages/index.js"
+  "/works/xpense": "pages/works/xpense.js"
 }

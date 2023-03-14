@@ -28,7 +28,10 @@ export const en = {
     ushki: "An e-commerce site for headphones based on Next.js",
     ushki_page: "An e-commerce site for headphones based on: sanity studio, stripe CMS and vercel app (PET-project)",
     currency: "Website for currency conversion of UAH, USD, EUR",
-    currency_page: "Website for currency conversion of UAH, USD, EUR. Based on React.js, Aos animations and tailwind css. Using fixer.io API"
+    currency_page: "Website for currency conversion of UAH, USD, EUR. Based on React.js, Aos animations and tailwind css. Using fixer.io API",
+    xpense: "Landing page for Xpense application",
+    xpense_page: "Landing page for Xpense application. Xpense helps you to organize your income and expenses. Based on React.js, tailwind css and Aos animations."
+
 }
 
 export const uk = {
@@ -61,5 +64,8 @@ export const uk = {
     ushki: "Інтернет-магазин навушників, написаний на Next.js",
     ushki_page: "Інтернет-магазин навушників, написаний на Next.js з використанням технологій Stripe, Vercel та Sanity CMS (PET-project)",
     currency: "Сайт для конвертації валют UAH, USD, EUR.",
-    currency_page: "Сайт для конвертації валют UAH, USD, EUR. На основі React.js, анімацій Aos і css tailwind. Використовувалось API fixer.io"
+    currency_page: "Сайт для конвертації валют UAH, USD, EUR. На основі React.js, анімацій Aos і css tailwind. Використовувалось API fixer.io",
+    xpense: "Лендінг сторінка для Xpense додатку",
+    xpense_page: "Лендінг сторінка додатку Xpense. Xpense допоможе вам організувати свої доходи та витрати. Сторінка розробилена на основі React.js, tailwind css і анімацій Aos."
+
 }
