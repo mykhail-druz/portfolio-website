@@ -6,7 +6,7 @@ import thumbUshki from '../public/images/works/e-ushki.png'
 import thumbPortfolio from '../public/images/works/portfolio.png'
 import thumbCurrency from '../public/images/works/currency.png'
 import thumbXpense from '../public/images/works/xpense.png'
-import thumbKatcom from '../public/images/works/katcom.png'
+import thumbKatcom from '../public/images/works/katcom.jpg'
 import Layout from '../components/layouts/article'
 
 import { useRouter } from 'next/router'
@@ -55,17 +55,17 @@ const Works = () => {
               </WorkGridItem>
             </Section>
             <Section>
+              <WorkGridItem id="e-ushki" title="E-ushki" thumbnail={thumbUshki}>
+                {t.ushki}
+              </WorkGridItem>
+            </Section>
+            <Section>
               <WorkGridItem
                 id="portfolio"
                 title="Designer`s portfolio"
                 thumbnail={thumbPortfolio}
               >
                 {t.designer}
-              </WorkGridItem>
-            </Section>
-            <Section>
-              <WorkGridItem id="e-ushki" title="E-ushki" thumbnail={thumbUshki}>
-                {t.ushki}
               </WorkGridItem>
             </Section>
           </SimpleGrid>

@@ -35,12 +35,12 @@ const Work = () => {
                         <span>Next.js, Typescript, React Swiper, Aos, Tailwind, reCAPTCHA</span>
                     </ListItem>
                 </List>
-                <WorkImage src="/images/works/katcom.png" alt="Katcom, Inc." />
-                <WorkImage src="/images/works/katcom_2.png" alt="Katcom, Inc." />
-                <WorkImage src="/images/works/katcom_3.png" alt="Katcom, Inc." />
-                <WorkImage src="/images/works/katcom_4.png" alt="Katcom, Inc." />
-                <WorkImage src="/images/works/katcom_5.png" alt="Katcom, Inc." />
-                <WorkImage src="/images/works/katcom_6.png" alt="Katcom, Inc." />
+                <WorkImage src="/images/works/katcom.jpg" alt="Katcom, Inc." />
+                <WorkImage src="/images/works/katcom_2.jpg" alt="Katcom, Inc." />
+                <WorkImage src="/images/works/katcom_3.jpg" alt="Katcom, Inc." />
+                <WorkImage src="/images/works/katcom_4.jpg" alt="Katcom, Inc." />
+                <WorkImage src="/images/works/katcom_5.jpg" alt="Katcom, Inc." />
+                <WorkImage src="/images/works/katcom_6.jpg" alt="Katcom, Inc." />
             </Container>
         </Layout>
     )
