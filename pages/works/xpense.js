@@ -35,12 +35,12 @@ const Work = () => {
                         <span>React.js, Aos, Tailwind</span>
                     </ListItem>
                 </List>
-                <WorkImage src="/images/works/xpense.png" alt="Currency converter" />
-                <WorkImage src="/images/works/xpense_2.png" alt="Currency converter" />
-                <WorkImage src="/images/works/xpense_3.png" alt="Currency converter" />
-                <WorkImage src="/images/works/xpense_4.png" alt="Currency converter" />
-                <WorkImage src="/images/works/xpense_5.png" alt="Currency converter" />
-                <WorkImage src="/images/works/xpense_6.png" alt="Currency converter" />
+                <WorkImage src="/images/works/xpense.png" alt="Xpense App" />
+                <WorkImage src="/images/works/xpense_2.png" alt="Xpense App" />
+                <WorkImage src="/images/works/xpense_3.png" alt="Xpense App" />
+                <WorkImage src="/images/works/xpense_4.png" alt="Xpense App" />
+                <WorkImage src="/images/works/xpense_5.png" alt="Xpense App" />
+                <WorkImage src="/images/works/xpense_6.png" alt="Xpense App" />
             </Container>
         </Layout>
     )
