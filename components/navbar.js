@@ -99,9 +99,9 @@ const Navbar = props => {
           <LinkItem href="/works" path={path}>
             {t.works}
           </LinkItem>
-          <LinkItem href="/posts" path={path}>
+          {/* <LinkItem href="/posts" path={path}>
             {t.posts}
-          </LinkItem>
+          </LinkItem> */}
           <LinkItem href="https://t.me/mykhail_druz">{t.contact}</LinkItem>
         </Stack>
         <Box flex={1} align="right">
