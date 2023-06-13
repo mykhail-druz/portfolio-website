@@ -45,7 +45,7 @@ const Works = () => {
                 {t.xpense}
               </WorkGridItem>
             </Section>
-            <Section>
+            {/* <Section>
               <WorkGridItem
                 id="currency-converter"
                 title="Currency converter"
@@ -53,7 +53,7 @@ const Works = () => {
               >
                 {t.currency}
               </WorkGridItem>
-            </Section>
+            </Section> */}
             <Section>
               <WorkGridItem id="e-ushki" title="E-ushki" thumbnail={thumbUshki}>
                 {t.ushki}
