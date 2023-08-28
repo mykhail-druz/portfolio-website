@@ -32,7 +32,7 @@ const Work = () => {
                     </ListItem>
                     <ListItem>
                         <Meta>STACK</Meta>
-                        <span>Next.js, Typescript, React Swiper, Aos, Tailwind, reCAPTCHA</span>
+                        <span>Next.js, Typescript, React Swiper, NodeMailer, Aos, Tailwind, reCAPTCHA</span>
                     </ListItem>
                 </List>
                 <WorkImage src="/images/works/katcom.jpg" alt="Katcom, Inc." />

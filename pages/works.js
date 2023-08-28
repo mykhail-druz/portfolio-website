@@ -7,6 +7,7 @@ import thumbPortfolio from '../public/images/works/portfolio.png'
 import thumbCurrency from '../public/images/works/currency.png'
 import thumbXpense from '../public/images/works/xpense.png'
 import thumbKatcom from '../public/images/works/katcom.jpg'
+import thumbAdv from '../public/images/works/adv.png'
 import Layout from '../components/layouts/article'
 
 import { useRouter } from 'next/router'
@@ -27,6 +28,15 @@ const Works = () => {
           </Heading>
 
           <SimpleGrid columns={[1, 1, 2]} gap={6}>
+          <Section>
+              <WorkGridItem
+                id="adv"
+                title="Adv Graphics Corp."
+                thumbnail={thumbAdv}
+              >
+                {t.adv}
+              </WorkGridItem>
+            </Section>
             <Section>
               <WorkGridItem
                 id="katcom"

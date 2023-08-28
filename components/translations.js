@@ -33,8 +33,9 @@ export const en = {
     xpense: "Landing page for Xpense application",
     xpense_page: "Landing page for Xpense application. Xpense helps you to organize your income and expenses. Based on React.js, tailwind css and Aos animations.",
     katcom: "Landing page for professional electrisians from Chicago, IL",
-    katcom_page: "Commercial landing page for professional electrician services in Chicago, IL. The site is developed on the basis of Next.js Typescript, Tailwind, AOS animations and using reCAPTCHA."
-
+    katcom_page: "Commercial landing page for professional electrician services in Chicago, IL. The site is developed on the basis of Next.js, Typescript, Tailwind, NodeMailer, AOS animations and using reCAPTCHA.",
+    adv: "Landing page for professional graphic designers from Chicago, IL",
+    adv_page: "Commercial landing page for professional graphic design services in Chicago, IL. The site is developed on the basis of Next.js, Typescript, Tailwind, React Swiper, NodeMailer, AOS animations and using reCAPTCHA.",
 }
 
 export const uk = {
@@ -72,6 +73,7 @@ export const uk = {
     xpense: "Лендінг сторінка для Xpense додатку",
     xpense_page: "Лендінг сторінка додатку Xpense. Xpense допоможе вам організувати свої доходи та витрати. Сторінка розробилена на основі React.js, tailwind css і анімацій Aos.",
     katcom: "Лендінг для професійних електриків з Чикаго, США",
-    katcom_page: "Комерційна лендінг сторінка з надання послуг професійних електриків у Чикаго, США. Сайт розроблений на основі Next.js Typescript, Tailwind, AOS анімацій та з використанням reCAPTCHA.",
-
+    katcom_page: "Комерційна лендінг сторінка з надання послуг професійних електриків у Чикаго, США. Сайт розроблений на основі Next.js Typescript, Tailwind, NodeMailer, AOS анімацій та з використанням reCAPTCHA.",
+    adv: "Лендінг сторінка для професійних графічних дизайнерів з Чикаго, Іллінойс",
+    adv_page: "Комерційна лендінг сторінка для послуг з професійного графічного дизайну в Чикаго, Іллінойс. Сайт розроблено на основі Next.js, Typescript, Tailwind, React Swiper, NodeMailer, анімації AOS та з використанням reCAPTCHA.",
 }
