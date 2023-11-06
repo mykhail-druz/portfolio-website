@@ -8,6 +8,7 @@ import thumbCurrency from '../public/images/works/currency.png'
 import thumbXpense from '../public/images/works/xpense.png'
 import thumbKatcom from '../public/images/works/katcom.jpg'
 import thumbAdv from '../public/images/works/adv.png'
+import thumbBace from '../public/images/works/bace_logo.jpg'
 import Layout from '../components/layouts/article'
 
 import { useRouter } from 'next/router'
@@ -24,10 +25,19 @@ const Works = () => {
       <Layout>
         <Container>
           <Heading as="h3" fontSize={20} mb={4}>
-            Works
+            Commercial projects
           </Heading>
 
           <SimpleGrid columns={[1, 1, 2]} gap={6}>
+            <Section>
+            <WorkGridItem
+                id="bace"
+                title="Bace Agency"
+                thumbnail={thumbBace}
+              >
+                {t.bace}
+              </WorkGridItem>
+            </Section>
           <Section>
               <WorkGridItem
                 id="adv"
@@ -46,7 +56,13 @@ const Works = () => {
                 {t.katcom}
               </WorkGridItem>
             </Section>
-            <Section>
+
+          </SimpleGrid>
+          <Heading as="h3" fontSize={20} mt={4} mb={4}>
+            PET projects
+          </Heading>
+          <SimpleGrid columns={[1, 1, 2]} gap={6}>
+          <Section>
               <WorkGridItem
                 id="xpense"
                 title="Xpense"
@@ -55,15 +71,6 @@ const Works = () => {
                 {t.xpense}
               </WorkGridItem>
             </Section>
-            {/* <Section>
-              <WorkGridItem
-                id="currency-converter"
-                title="Currency converter"
-                thumbnail={thumbCurrency}
-              >
-                {t.currency}
-              </WorkGridItem>
-            </Section> */}
             <Section>
               <WorkGridItem id="e-ushki" title="E-ushki" thumbnail={thumbUshki}>
                 {t.ushki}

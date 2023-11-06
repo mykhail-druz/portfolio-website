@@ -130,6 +130,7 @@ const HomePage = () => {
           <Paragraph>-JavaScript ES5/ES6, Typescript, OOP</Paragraph>
           <Paragraph>-React, Next.js</Paragraph>
           <Paragraph>-Git, GitHub, Figma</Paragraph>
+          <Paragraph>-Jira, Slack</Paragraph>
         </Section>
         <Section delay={0.3}>
           <Heading as="h3" variant="section-title">
