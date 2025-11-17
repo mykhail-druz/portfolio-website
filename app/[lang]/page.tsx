@@ -1,7 +1,7 @@
-'use client';
+'use client'
 
-import React from 'react';
-import Link from 'next/link';
+import React from 'react'
+import Link from 'next/link'
 import {
   Container,
   Box,
@@ -12,29 +12,29 @@ import {
   useColorModeValue,
   chakra,
   Icon
-} from '@chakra-ui/react';
-import { ChevronRightIcon } from '@chakra-ui/icons';
-import ArticleLayout from '../../components/article-layout';
-import Section from '../../components/section';
-import Paragraph from '../../components/paragraph';
-import { BioSection, BioYear } from '../../components/bio';
-import Image from 'next/image';
-import { IoLogoInstagram, IoLogoGithub, IoLogoLinkedin } from 'react-icons/io5';
-import { FaTelegramPlane } from 'react-icons/fa';
-import { getDictionary } from './translations';
+} from '@chakra-ui/react'
+import { ChevronRightIcon } from '@chakra-ui/icons'
+import ArticleLayout from '../../components/article-layout'
+import Section from '../../components/section'
+import Paragraph from '../../components/paragraph'
+import { BioSection, BioYear } from '../../components/bio'
+import Image from 'next/image'
+import { IoLogoInstagram, IoLogoGithub, IoLogoLinkedin } from 'react-icons/io5'
+import { FaTelegramPlane } from 'react-icons/fa'
+import { getDictionary } from './translations'
 
 const ProfileImage = chakra(Image, {
   shouldForwardProp: prop => ['width', 'height', 'src', 'alt'].includes(prop)
-});
+})
 
 interface HomePageProps {
-  params: Promise<{ lang: string }>;
+  params: Promise<{ lang: string }>
 }
 
 export default function HomePage({ params }: HomePageProps) {
   // Unwrap params using React.use()
-  const unwrappedParams = React.use(params);
-  const t = getDictionary(unwrappedParams.lang);
+  const unwrappedParams = React.use(params)
+  const t = getDictionary(unwrappedParams.lang)
 
   return (
     <ArticleLayout>
@@ -73,7 +73,7 @@ export default function HomePage({ params }: HomePageProps) {
               overflow="hidden"
             >
               <ProfileImage
-                src="/images/misha.JPG"
+                src="/images/misha.webp"
                 alt="Profile image"
                 borderRadius="full"
                 width="100"
@@ -86,7 +86,9 @@ export default function HomePage({ params }: HomePageProps) {
           <Heading as="h3" variant="section-title">
             {t.about}
           </Heading>
-          <Paragraph>{t.about_desc}</Paragraph>
+          <Box whiteSpace="pre-line">
+            <Paragraph>{t.about_desc}</Paragraph>
+          </Box>
           <Box textAlign="center" my={4}>
             <Link href={`/${unwrappedParams.lang}/works`}>
               <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
@@ -99,10 +101,102 @@ export default function HomePage({ params }: HomePageProps) {
           <Heading as="h3" variant="section-title">
             {t.skills}
           </Heading>
-          <Paragraph>{t.skills_1}</Paragraph>
-          <Paragraph>{t.skills_2}</Paragraph>
-          <Paragraph>{t.skills_3}</Paragraph>
-          <Paragraph>{t.skills_4}</Paragraph>
+          <Box whiteSpace="pre-line">
+            <Paragraph>{t.skills_1}</Paragraph>
+            <Paragraph>{t.skills_2}</Paragraph>
+            <Paragraph>{t.skills_3}</Paragraph>
+            <Paragraph>{t.skills_4}</Paragraph>
+          </Box>
+        </Section>
+        <Section delay={0.25}>
+          <Heading as="h3" variant="section-title">
+            {t.experience}
+          </Heading>
+          
+          <Box mb={6}>
+            <Heading as="h4" fontSize={18} mb={1}>
+              {t.experience_wildtraff_title}
+            </Heading>
+            <Box fontSize={14} color={useColorModeValue('gray.600', 'gray.400')} mb={2}>
+              {t.experience_wildtraff_period}
+            </Box>
+            <Box fontSize={16} fontWeight="semibold" mb={2}>
+              {t.experience_wildtraff_role}
+            </Box>
+            <Paragraph mb={2}>{t.experience_wildtraff_desc}</Paragraph>
+            <List spacing={1} ml={4}>
+              <ListItem fontSize={14}>{t.experience_wildtraff_achievement_1}</ListItem>
+              <ListItem fontSize={14}>{t.experience_wildtraff_achievement_2}</ListItem>
+              <ListItem fontSize={14}>{t.experience_wildtraff_achievement_3}</ListItem>
+              <ListItem fontSize={14}>{t.experience_wildtraff_achievement_4}</ListItem>
+            </List>
+          </Box>
+
+          <Box mb={6}>
+            <Heading as="h4" fontSize={18} mb={1}>
+              {t.experience_techcortex_title}
+            </Heading>
+            <Box fontSize={14} color={useColorModeValue('gray.600', 'gray.400')} mb={2}>
+              {t.experience_techcortex_period}
+            </Box>
+            <Box fontSize={16} fontWeight="semibold" mb={2}>
+              {t.experience_techcortex_role}
+            </Box>
+            <Paragraph mb={2}>{t.experience_techcortex_desc}</Paragraph>
+            <List spacing={1} ml={4}>
+              <ListItem fontSize={14}>{t.experience_techcortex_achievement_1}</ListItem>
+              <ListItem fontSize={14}>{t.experience_techcortex_achievement_2}</ListItem>
+              <ListItem fontSize={14}>{t.experience_techcortex_achievement_3}</ListItem>
+              <ListItem fontSize={14}>{t.experience_techcortex_achievement_4}</ListItem>
+              <ListItem fontSize={14}>{t.experience_techcortex_achievement_5}</ListItem>
+              <ListItem fontSize={14}>{t.experience_techcortex_achievement_6}</ListItem>
+            </List>
+          </Box>
+
+          <Box mb={6}>
+            <Heading as="h4" fontSize={18} mb={1}>
+              {t.experience_forhotel_title}
+            </Heading>
+            <Box fontSize={14} color={useColorModeValue('gray.600', 'gray.400')} mb={2}>
+              {t.experience_forhotel_period}
+            </Box>
+            <Box fontSize={16} fontWeight="semibold" mb={2}>
+              {t.experience_forhotel_role}
+            </Box>
+            <Paragraph mb={2}>{t.experience_forhotel_desc}</Paragraph>
+            <List spacing={1} ml={4}>
+              <ListItem fontSize={14}>{t.experience_forhotel_achievement_1}</ListItem>
+              <ListItem fontSize={14}>{t.experience_forhotel_achievement_2}</ListItem>
+              <ListItem fontSize={14}>{t.experience_forhotel_achievement_3}</ListItem>
+              <ListItem fontSize={14}>{t.experience_forhotel_achievement_4}</ListItem>
+            </List>
+          </Box>
+
+          <Box mb={6}>
+            <Heading as="h4" fontSize={18} mb={1}>
+              {t.experience_bace_title}
+            </Heading>
+            <Box fontSize={14} color={useColorModeValue('gray.600', 'gray.400')} mb={2}>
+              {t.experience_bace_period}
+            </Box>
+            <Box fontSize={16} fontWeight="semibold" mb={2}>
+              {t.experience_bace_role}
+            </Box>
+            <Paragraph>{t.experience_bace_desc}</Paragraph>
+          </Box>
+
+          <Box mb={6}>
+            <Heading as="h4" fontSize={18} mb={1}>
+              {t.experience_self_title}
+            </Heading>
+            <Box fontSize={14} color={useColorModeValue('gray.600', 'gray.400')} mb={2}>
+              {t.experience_self_period}
+            </Box>
+            <Box fontSize={16} fontWeight="semibold" mb={2}>
+              {t.experience_self_role}
+            </Box>
+            <Paragraph>{t.experience_self_desc}</Paragraph>
+          </Box>
         </Section>
         <Section>
           <Heading as="h3" variant="section-title">
@@ -110,18 +204,33 @@ export default function HomePage({ params }: HomePageProps) {
           </Heading>
           <Paragraph>{t.edu_1}</Paragraph>
           <Paragraph>{t.edu_2}</Paragraph>
-          <Image src="/images/diplom.png" width={500} height={400} alt="Diploma" />
+          <Box display="flex" flexDirection="column" gap={4} mt={4}>
+            <Image
+              src="/images/diplom.webp"
+              width={500}
+              height={400}
+              alt="Diploma"
+              style={{ maxWidth: '100%', height: 'auto' }}
+            />
+            <Image
+              src="/images/IBM-Diplom.webp"
+              width={500}
+              height={400}
+              alt="IBM SkillsBuild Certificate"
+              style={{ maxWidth: '100%', height: 'auto' }}
+            />
+          </Box>
         </Section>
         <Section>
           <Heading as="h3" variant="section-title">
             {t.tech}
           </Heading>
-          <Paragraph>-HTML5/CSS3</Paragraph>
-          <Paragraph>-Bootstrap 5, TailWind, Chakra UI, AOS</Paragraph>
-          <Paragraph>-JavaScript ES5/ES6, Typescript, OOP</Paragraph>
-          <Paragraph>-React, Next.js</Paragraph>
-          <Paragraph>-Git, GitHub, Figma</Paragraph>
-          <Paragraph>-Jira, Slack</Paragraph>
+          <Paragraph>{t.tech_1}</Paragraph>
+          <Paragraph>{t.tech_2}</Paragraph>
+          <Paragraph>{t.tech_3}</Paragraph>
+          <Paragraph>{t.tech_4}</Paragraph>
+          <Paragraph>{t.tech_5}</Paragraph>
+          <Paragraph>{t.tech_6}</Paragraph>
         </Section>
         <Section delay={0.3}>
           <Heading as="h3" variant="section-title">
@@ -140,7 +249,7 @@ export default function HomePage({ params }: HomePageProps) {
             {t.bio_3}
           </BioSection>
           <BioSection>
-            <BioYear>March 2023</BioYear>
+            <BioYear>May 2025</BioYear>
             {t.bio_4}
           </BioSection>
         </Section>
@@ -203,6 +312,5 @@ export default function HomePage({ params }: HomePageProps) {
         </Section>
       </Container>
     </ArticleLayout>
-  );
+  )
 }
-

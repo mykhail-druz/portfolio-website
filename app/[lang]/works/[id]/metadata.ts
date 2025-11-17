@@ -1,82 +1,30 @@
 import type { Metadata } from 'next';
-import { notFound } from 'next/navigation';
-
-// Define metadata for each work
-interface WorkData {
-  title: string;
-  description: string;
-  images: string[];
-  website?: string;
-  stack: string;
-}
-
-const workMetadata: Record<string, WorkData> = {
-  adv: {
-    title: 'Adv Graphics Corp',
-    description: 'Landing page for Adv Graphics Corp',
-    images: ['/images/works/adv.png', '/images/works/adv_2.png', '/images/works/adv_3.png', '/images/works/adv_4.png'],
-    website: 'https://advgraphicscorp.com/',
-    stack: 'Next.js, Typescript, Tailwind, Aos, Sanity, NodeMailer, React Swiper, ReCaptcha'
-  },
-  bace: {
-    title: 'Bace Agency',
-    description: 'Website for Bace Agency',
-    images: ['/images/works/bace_logo.jpg'],
-    website: 'https://bace.agency/',
-    stack: 'Next.js, Typescript, Tailwind, Framer Motion'
-  },
-  katcom: {
-    title: 'Katcom, Inc.',
-    description: 'Website for Katcom, Inc.',
-    images: ['/images/works/katcom.jpg'],
-    website: 'https://katcom.com/',
-    stack: 'Next.js, Typescript, Tailwind, Framer Motion'
-  },
-  xpense: {
-    title: 'Xpense',
-    description: 'Expense tracking application',
-    images: ['/images/works/xpense.png'],
-    stack: 'React, Redux, Firebase'
-  },
-  'e-ushki': {
-    title: 'E-ushki',
-    description: 'E-commerce website for headphones',
-    images: ['/images/works/e-ushki.png'],
-    stack: 'HTML, CSS, JavaScript'
-  },
-  portfolio: {
-    title: 'Designer`s portfolio',
-    description: 'Portfolio website for a designer',
-    images: ['/images/works/portfolio.png'],
-    stack: 'HTML, CSS, JavaScript'
-  },
-  'currency-converter': {
-    title: 'Currency Converter',
-    description: 'Currency conversion application',
-    images: ['/images/works/currency.png'],
-    stack: 'React, API'
-  }
-};
+import { getWorkById, getWorkTitle, getWorkShortDescription } from '../../../../lib/works-utils';
+import type { Language } from '../../../../lib/works-utils';
 
 interface GenerateMetadataProps {
-  params: Promise<{ id: string }>;
+  params: Promise<{ id: string; lang: string }>;
 }
 
 // Generate metadata for the page
 export async function generateMetadata({ params }: GenerateMetadataProps): Promise<Metadata> {
   const unwrappedParams = await params;
-  const { id } = unwrappedParams;
+  const { id, lang } = unwrappedParams;
+  const language = lang as Language;
+
+  // Get work data from centralized source
+  const work = getWorkById(id);
 
   // Check if the work exists
-  if (!workMetadata[id]) {
+  if (!work) {
     return {
-      title: 'Work Not Found'
+      title: 'Work Not Found - Mykhail Druz'
     };
   }
 
   return {
-    title: `${workMetadata[id].title} - Mykhail Druz`,
-    description: workMetadata[id].description
+    title: `${getWorkTitle(work, language)} - Mykhail Druz`,
+    description: getWorkShortDescription(work, language)
   };
 }
 
