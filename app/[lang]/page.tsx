@@ -123,7 +123,9 @@ export default function HomePage({ params }: HomePageProps) {
             <Box fontSize={16} fontWeight="semibold" mb={2}>
               {t.experience_wildtraff_role}
             </Box>
-            <Paragraph mb={2}>{t.experience_wildtraff_desc}</Paragraph>
+            <Box mb={2}>
+              <Paragraph>{t.experience_wildtraff_desc}</Paragraph>
+            </Box>
             <List spacing={1} ml={4}>
               <ListItem fontSize={14}>{t.experience_wildtraff_achievement_1}</ListItem>
               <ListItem fontSize={14}>{t.experience_wildtraff_achievement_2}</ListItem>
@@ -142,7 +144,9 @@ export default function HomePage({ params }: HomePageProps) {
             <Box fontSize={16} fontWeight="semibold" mb={2}>
               {t.experience_techcortex_role}
             </Box>
-            <Paragraph mb={2}>{t.experience_techcortex_desc}</Paragraph>
+            <Box mb={2}>
+              <Paragraph>{t.experience_techcortex_desc}</Paragraph>
+            </Box>
             <List spacing={1} ml={4}>
               <ListItem fontSize={14}>{t.experience_techcortex_achievement_1}</ListItem>
               <ListItem fontSize={14}>{t.experience_techcortex_achievement_2}</ListItem>
@@ -163,7 +167,9 @@ export default function HomePage({ params }: HomePageProps) {
             <Box fontSize={16} fontWeight="semibold" mb={2}>
               {t.experience_forhotel_role}
             </Box>
-            <Paragraph mb={2}>{t.experience_forhotel_desc}</Paragraph>
+            <Box mb={2}>
+              <Paragraph>{t.experience_forhotel_desc}</Paragraph>
+            </Box>
             <List spacing={1} ml={4}>
               <ListItem fontSize={14}>{t.experience_forhotel_achievement_1}</ListItem>
               <ListItem fontSize={14}>{t.experience_forhotel_achievement_2}</ListItem>
