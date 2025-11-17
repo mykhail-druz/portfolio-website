@@ -1,8 +1,11 @@
+'use client';
+
 import NextLink from "next/link";
 import Image from "next/image";
 import { Box, Text, LinkBox, LinkOverlay } from "@chakra-ui/react";
 import { Global } from "@emotion/react";
 import dynamic from "next/dynamic";
+import { useParams } from "next/navigation";
 
 export const GridItem = ({ children, href, title, thumbnail }) => (
     <Box w="100%" textAlign="center">
@@ -11,7 +14,7 @@ export const GridItem = ({ children, href, title, thumbnail }) => (
             src={thumbnail}
             alt={title}
             className="grid-item-thumbnail"
-            placeholdr="blur"
+            // Remove placeholder="blur" as it requires blurDataURL
             loading="lazy"
             />
             <LinkOverlay href={href} target="_blank">
@@ -22,21 +25,25 @@ export const GridItem = ({ children, href, title, thumbnail }) => (
     </Box>
 )
 
-export const WorkGridItem = ({ children, id, title, thumbnail }) => (
-    <Box w="100%" align="center">
-        <NextLink href={`/works/${id}`}>
+export const WorkGridItem = ({ children, id, title, thumbnail }) => {
+    const params = useParams();
+    const lang = params?.lang || 'uk';
+
+    return (
+        <Box w="100%" align="center">
             <LinkBox
             as={NextLink}
-            href={`/works/${id}`}
+            href={`/${lang}/works/${id}`}
             scroll={false}
             cursor="pointer"
             >
-            <Image src={thumbnail}
-            alt="title"
-            className="grid-item-thumbnail"
-            placeholder="blur"
+            <Image 
+                src={thumbnail}
+                alt={title}
+                className="grid-item-thumbnail"
+                // Remove placeholder="blur" as it requires blurDataURL
             />
-            <LinkOverlay as="div" href={`/works/${id}`}>
+            <LinkOverlay as="div" href={`/${lang}/works/${id}`}>
                 <Text mt={2} fontSize={20}>
                     {title}
                 </Text>
@@ -45,9 +52,9 @@ export const WorkGridItem = ({ children, id, title, thumbnail }) => (
                 {children}
             </Text>
             </LinkBox>
-        </NextLink>
-    </Box>
-)
+        </Box>
+    );
+}
 
 export const GridItemStyle = () => (
     <Global

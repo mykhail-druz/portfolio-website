@@ -1,52 +1,39 @@
-import NextLink from 'next/link'
+'use client';
+
+import React from 'react';
+import Link from 'next/link';
 import {
-  Link,
   Container,
   Box,
   Heading,
-  SimpleGrid,
   Button,
   List,
   ListItem,
   useColorModeValue,
   chakra,
   Icon
-} from '@chakra-ui/react'
-import { ChevronRightIcon } from '@chakra-ui/icons'
-import Layout from '../components/layouts/article'
-import Section from '../components/section'
-import Paragraph from '../components/paragraph'
-import { BioSection, BioYear } from '../components/bio'
-import Image from 'next/image'
-import { GridItem } from '../components/grid-item'
-import { IoLogoInstagram, IoLogoGithub, IoLogoLinkedin } from 'react-icons/io5'
-import { FaTelegramPlane } from 'react-icons/fa'
-import { useRouter } from 'next/router'
-import { en, uk } from '../components/translations'
+} from '@chakra-ui/react';
+import { ChevronRightIcon } from '@chakra-ui/icons';
+import ArticleLayout from '../../components/article-layout';
+import Section from '../../components/section';
+import Paragraph from '../../components/paragraph';
+import { BioSection, BioYear } from '../../components/bio';
+import Image from 'next/image';
+import { IoLogoInstagram, IoLogoGithub, IoLogoLinkedin } from 'react-icons/io5';
+import { FaTelegramPlane } from 'react-icons/fa';
+import { getDictionary } from './translations';
 
 const ProfileImage = chakra(Image, {
   shouldForwardProp: prop => ['width', 'height', 'src', 'alt'].includes(prop)
-})
+});
 
-const HomePage = () => {
-  const router = useRouter()
-  const { locale } = router
-
-  const t = locale === 'uk' ? uk : en
-
-  // const handleLanguageToggle = () => {
-  //     switch (locale) {
-  //         case "uk":
-  //             router.push("/", "/", { locale: "en" })
-  //             break;
-  //         case "en":
-  //             router.push("/", "/", { locale: "uk" })
-  //             break;
-  //     }
-  // }
+export default function HomePage({ params }) {
+  // Unwrap params using React.use()
+  const unwrappedParams = React.use(params);
+  const t = getDictionary(unwrappedParams.lang);
 
   return (
-    <Layout>
+    <ArticleLayout>
       <Container>
         <Box
           borderRadius="lg"
@@ -82,7 +69,7 @@ const HomePage = () => {
               overflow="hidden"
             >
               <ProfileImage
-                src="/images/misha.jpg"
+                src="/images/misha.JPG"
                 alt="Profile image"
                 borderRadius="full"
                 width="100"
@@ -97,11 +84,11 @@ const HomePage = () => {
           </Heading>
           <Paragraph>{t.about_desc}</Paragraph>
           <Box align="center" my={4}>
-            <NextLink href="/works">
+            <Link href={`/${unwrappedParams.lang}/works`}>
               <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
                 {t.works}
               </Button>
-            </NextLink>
+            </Link>
           </Box>
         </Section>
         <Section delay={0.2}>
@@ -119,7 +106,7 @@ const HomePage = () => {
           </Heading>
           <Paragraph>{t.edu_1}</Paragraph>
           <Paragraph>{t.edu_2}</Paragraph>
-          <Image src="/images/diplom.png" width={500} height={400} />
+          <Image src="/images/diplom.png" width={500} height={400} alt="Diploma" />
         </Section>
         <Section>
           <Heading as="h3" variant="section-title">
@@ -211,9 +198,6 @@ const HomePage = () => {
           </List>
         </Section>
       </Container>
-    </Layout>
-  )
+    </ArticleLayout>
+  );
 }
-
-export default HomePage
-export { getServerSideProps } from '../components/chakra'

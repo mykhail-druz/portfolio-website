@@ -4,8 +4,8 @@
   "description": "A unique website which I can use as portfolio for my works",
   "main": "index.js",
   "scripts": {
-    "dev": "next dev -H 0.0.0.0",
-    "build": "next build",
+    "dev": "next dev -H 0.0.0.0 --webpack",
+    "build": "next build --webpack",
     "prettier": "prettier -write .",
     "lint": "next lint"
   },
@@ -21,24 +21,25 @@
   },
   "homepage": "https://github.com/mykhail-druz/portfolio-website#readme",
   "dependencies": {
-    "@chakra-ui/icons": "^2.0.17",
-    "@chakra-ui/react": "^2.4.9",
-    "@emotion/react": "^11.10.5",
-    "@emotion/styled": "^11.10.5",
-    "framer-motion": "^8.5.5",
-    "i18next": "^22.4.9",
-    "i18next-browser-languagedetector": "^7.0.1",
-    "i18next-http-backend": "^2.1.1",
-    "next": "^13.1.6",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-i18next": "^12.1.5",
-    "react-icons": "^4.7.1",
-    "three": "^0.149.0"
+    "@chakra-ui/icons": "^2.2.0",
+    "@chakra-ui/react": "^2.9.0",
+    "@emotion/react": "^11.13.0",
+    "@emotion/styled": "^11.13.0",
+    "framer-motion": "^11.0.0",
+    "i18next": "^23.7.16",
+    "i18next-browser-languagedetector": "^7.2.0",
+    "i18next-http-backend": "^2.4.2",
+    "next": "^16.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-i18next": "^15.0.0",
+    "react-icons": "^4.12.0",
+    "three": "^0.160.0"
   },
   "devDependencies": {
-    "eslint": "^8.33.0",
-    "eslint-config-next": "^13.1.6",
-    "prettier": "^2.8.3"
+    "eslint": "^9.0.0",
+    "eslint-config-next": "^16.0.0",
+    "file-loader": "^6.2.0",
+    "prettier": "^3.1.1"
   }
 }

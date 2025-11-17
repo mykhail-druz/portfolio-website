@@ -1,3 +1,5 @@
+'use client';
+
 import Link from "next/link";
 import PrintIcon from "../icons/print.js";
 import Image from "next/image";
