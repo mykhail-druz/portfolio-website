@@ -1,0 +1,47 @@
+'use client';
+
+import { forwardRef, ReactNode } from 'react'
+import { Box, Spinner } from '@chakra-ui/react'
+
+export const CompSpinner = () => (
+  <Spinner
+    size="xl"
+    position="absolute"
+    left="50%"
+    top="50%"
+    ml="calc(0px - var(--spinner-size) / 2)"
+    mt="calc(0px - var(--spinner-size))"
+  />
+)
+
+interface CompContainerProps {
+  children: ReactNode;
+}
+
+export const CompContainer = forwardRef<HTMLDivElement, CompContainerProps>(({ children }, ref) => (
+  <Box
+    ref={ref}
+    className="voxel-comp"
+    m="auto"
+    mt={['-20px', '-60px', '-120px']}
+    mb={['-40px', '-140px', '-200px']}
+    w={[280, 480, 640]}
+    h={[280, 480, 640]}
+    position="relative"
+  >
+    {children}
+  </Box>
+))
+
+CompContainer.displayName = 'CompContainer';
+
+const Loader = () => {
+  return (
+    <CompContainer>
+      <CompSpinner />
+    </CompContainer>
+  )
+}
+
+export default Loader
+
